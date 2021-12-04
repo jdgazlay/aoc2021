@@ -1,0 +1,38 @@
+[gd_scene format=2]
+
+[node name="Day" type="VBoxContainer"]
+margin_right = 110.0
+margin_bottom = 38.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 110.0
+margin_bottom = 14.0
+text = "Day "
+align = 1
+valign = 1
+
+[node name="vertical" type="VBoxContainer" parent="."]
+margin_top = 18.0
+margin_right = 110.0
+margin_bottom = 38.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buttons" type="HSplitContainer" parent="vertical"]
+margin_right = 110.0
+margin_bottom = 20.0
+
+[node name="Part1" type="Button" parent="vertical/buttons"]
+margin_right = 49.0
+margin_bottom = 20.0
+text = "Part 1"
+
+[node name="Part2" type="Button" parent="vertical/buttons"]
+margin_left = 61.0
+margin_right = 110.0
+margin_bottom = 20.0
+text = "Part 2"
