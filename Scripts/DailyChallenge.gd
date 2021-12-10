@@ -4,6 +4,7 @@ class_name DailyChallenge
 
 export(String, FILE) var input_path
 export(String) var label_text = 'Day ' setget set_label
+signal send_answer(answer_text)
 
 onready var part1 = $vertical/buttons/Part1 as Button
 onready var part2 = $vertical/buttons/Part2 as Button
@@ -42,8 +43,10 @@ func _ready():
 
 
 func _on_Part1_pressed():
+	emit_signal("send_answer", '_on_Part1_pressed not implemented')
 	print('_on_Part1_pressed not implemented')
 
 
 func _on_Part2_pressed():
+	emit_signal("send_answer", '_on_Part2_pressed not implemented')
 	print('_on_Part2_pressed not implemented')
