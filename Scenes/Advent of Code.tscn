@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Day01.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Day.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Day02.gd" type="Script" id=3]
 
 [node name="Advent of Code" type="Node2D"]
 
@@ -15,14 +16,14 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 457.0
+margin_left = 394.0
 margin_top = 268.0
-margin_right = 567.0
+margin_right = 629.0
 margin_bottom = 332.0
 custom_constants/separation = 13
 
 [node name="First 5" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
-margin_right = 110.0
+margin_right = 235.0
 margin_bottom = 38.0
 custom_constants/separation = 15
 __meta__ = {
@@ -34,14 +35,20 @@ script = ExtResource( 1 )
 input_path = "res://Resources/day01.tres"
 label_text = "Day 1"
 
+[node name="Day02" parent="CenterContainer/VBoxContainer/First 5" instance=ExtResource( 2 )]
+margin_left = 125.0
+margin_right = 235.0
+script = ExtResource( 3 )
+label_text = "Day 2"
+
 [node name="Second 5" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
 margin_top = 51.0
-margin_right = 110.0
+margin_right = 235.0
 margin_bottom = 51.0
 custom_constants/separation = 15
 
 [node name="Third 5" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
 margin_top = 64.0
-margin_right = 110.0
+margin_right = 235.0
 margin_bottom = 64.0
 custom_constants/separation = 15
