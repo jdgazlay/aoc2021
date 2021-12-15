@@ -41,12 +41,14 @@ func _ready():
 		part1.connect("pressed", self, "_on_Part1_pressed")
 		part2.connect("pressed", self, "_on_Part2_pressed")
 
+func send_answer(answer):
+	emit_signal("send_answer", answer)
+	print(answer)
+
 
 func _on_Part1_pressed():
-	emit_signal("send_answer", '_on_Part1_pressed not implemented')
-	print('_on_Part1_pressed not implemented')
+	send_answer('_on_Part1_pressed not implemented')
 
 
 func _on_Part2_pressed():
-	emit_signal("send_answer", '_on_Part2_pressed not implemented')
-	print('_on_Part2_pressed not implemented')
+	send_answer('_on_Part2_pressed not implemented')

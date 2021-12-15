@@ -13,8 +13,7 @@ func get_increases(num_list: Array) -> int:
 
 func _on_Part1_pressed():
 	var input_data: = get_input_data()
-	emit_signal("send_answer", str(get_increases(input_data)))
-	print(get_increases(input_data))
+	send_answer(str(get_increases(input_data)))
 
 
 func _on_Part2_pressed():
@@ -23,5 +22,4 @@ func _on_Part2_pressed():
 	var sums = []
 	for num_index in range(len(input_data) - 2):
 		sums.append(int(input_data[num_index]) + int(input_data[num_index + 1]) + int(input_data[num_index + 2]))
-	emit_signal("send_answer", str(get_increases(sums)))
-	print(get_increases(sums))
+	send_answer(str(get_increases(sums)))
