@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Day01.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Day.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Advent of Code.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/Day02.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Day03.gd" type="Script" id=5]
 
 [node name="Advent of Code" type="Node2D"]
 script = ExtResource( 3 )
@@ -18,19 +19,19 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 394.0
+margin_left = 332.0
 margin_top = 254.0
-margin_right = 629.0
+margin_right = 692.0
 margin_bottom = 345.0
 custom_constants/separation = 13
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
-margin_right = 235.0
+margin_right = 360.0
 margin_bottom = 14.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer"]
-margin_left = 36.0
-margin_right = 198.0
+margin_left = 99.0
+margin_right = 261.0
 margin_bottom = 14.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer/HBoxContainer"]
@@ -49,7 +50,7 @@ rect_min_size = Vector2( 103, 14 )
 
 [node name="First 5" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
 margin_top = 27.0
-margin_right = 235.0
+margin_right = 360.0
 margin_bottom = 65.0
 custom_constants/separation = 15
 __meta__ = {
@@ -66,16 +67,23 @@ margin_left = 125.0
 margin_right = 235.0
 script = ExtResource( 4 )
 input_path = "res://Resources/day02.tres"
-label_text = "Day 02"
+label_text = "Day 2"
+
+[node name="Day03" parent="CenterContainer/VBoxContainer/First 5" instance=ExtResource( 2 )]
+margin_left = 250.0
+margin_right = 360.0
+script = ExtResource( 5 )
+input_path = "res://Resources/day03.tres"
+label_text = "Day 3"
 
 [node name="Second 5" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
 margin_top = 78.0
-margin_right = 235.0
+margin_right = 360.0
 margin_bottom = 78.0
 custom_constants/separation = 15
 
 [node name="Third 5" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
 margin_top = 91.0
-margin_right = 235.0
+margin_right = 360.0
 margin_bottom = 91.0
 custom_constants/separation = 15
